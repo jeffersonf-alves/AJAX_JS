@@ -20,7 +20,7 @@ Mas vamos focar no principal assunto aqui que é fazer um **AJAX** simples!
 
 ## Segundo passo
 
-Agora que já temos nosso objeto, vamos chamar um dos métodos, esse método é o **open**, ele é quem fará nossa busca, então ela vai receber dois parâmetros! o primeiro é método HTTP a ser utilizado e o segundo é o link da nossa **API**
+Agora que já temos nosso objeto, vamos chamar um dos métodos, esse método é o **open**, ele é quem fará nossa busca, então ela vai receber dois parâmetros! o primeiro é o método HTTP a ser utilizado e o segundo é o link da nossa **API**
 ```
 let ajax = new XMLHttpRequest();
 // chamando o open

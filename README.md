@@ -58,10 +58,43 @@ ajax.onreadystatechange = function() {
 
     let usuario = JSON.parse(ajax.responseText);
 
-    console.log(usuario.bio)
+    console.log(usuario)
 }
 
-
+```
+## Quarto passo
+Você vai notar que recebemos todos os valores em JSON da nossa API, mas o legal é que você faça uma verificação pra ver se todos os dados estão chegando corretamente, no caso utilizando uma propridade do nosso objeto chamada **status**, no caso vamos fazer essa verificação utilizando uma estrutura condicional, código vai ficar assim!
 
 ```
+if(ajax.status === 200) {
+    console.log(usuario);
+} else {
+    console.log('Problemas pra encontrar');
+}
+```
+Isso é o básico, e você já pode receber dados da sua API, mas você pode fazer outras validações para deixar sua aplicação mais segura,
+o código comleto fica assim!
+```
+let ajax = new XMLHttpRequest();
+
+ajax.open('GET', `https://api.github.com/users/jeffersonf-alves1`);
+ajax.send(null);
+
+ajax.onreadystatechange = function() {
+
+    let usuario = JSON.parse(ajax.responseText);
+
+    if(ajax.status === 200) {
+        console.log(usuario.bio);
+    } else {
+        console.log('Problemas pra encontrar');
+    }
+}
+
+```
+
+Agora você pode copiar esse repositória com um projetinho básico que fizemos que faz busca de usuários no github utilizando o conhecimento básico que temos até agora.
+
+
+Link da API: https://api.github.com/users
 

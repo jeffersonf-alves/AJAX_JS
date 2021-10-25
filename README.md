@@ -73,7 +73,7 @@ if(ajax.status === 200) {
 }
 ```
 Isso é o básico, e você já pode receber dados da sua API, mas você pode fazer outras validações para deixar sua aplicação mais segura,
-o código comleto fica assim!
+o código completo fica assim!
 ```
 let ajax = new XMLHttpRequest();
 
